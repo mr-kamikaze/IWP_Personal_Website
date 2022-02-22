@@ -1,0 +1,265 @@
+/* ----------------------------- Basic CSS Reset ---------------------------- */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* ---------------------------------- Home ---------------------------------- */
+.home_container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  max-width: 120em;
+  gap: 1em;
+
+  grid-template-rows: 100px 1fr 80px;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+    "nav nav"
+    "hero cta"
+    "foot foot";
+}
+
+/* --------------------------------- Contact -------------------------------- */
+.contact_container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  max-width: 120em;
+  gap: 1em;
+
+  grid-template-rows: 100px 1fr 80px;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas:
+    "nav nav"
+    "hero hero"
+    "foot foot";
+}
+
+.contact_hero {
+  justify-content: center;
+  align-items: center !important;
+}
+
+/* ------------------------------- Contact Div ------------------------------ */
+.contact_div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+/* ------------------------------ Text Styling ------------------------------ */
+/* Brandname styling */
+.branding {
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+/* Title */
+.title {
+  font-size: 4.8em;
+  font-weight: 800;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 2.2em;
+}
+
+.copyright_text {
+  font-size: 1.4em;
+}
+
+/* ------------------------------- Navigation ------------------------------- */
+.navigation,
+.hero,
+.cta,
+.footer {
+  padding: 2em;
+}
+
+.navigation {
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1em solid #3332;
+}
+
+.navigation_links {
+  display: flex;
+  gap: 2em;
+}
+
+.navigation_links_item {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.6em;
+}
+
+/* ------------------------------ Hero Section ------------------------------ */
+.hero {
+  grid-area: hero;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: flex-start;
+}
+
+/* ----------------------------- Call To Action ----------------------------- */
+.cta {
+  grid-area: cta;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --------------------------------- Footer --------------------------------- */
+.footer {
+  grid-area: foot;
+  display: flex;
+  border-top: 0.1em solid #3332;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+/* ------------------------------ List Entries ------------------------------ */
+
+.list {
+  padding-left: 2em;
+  font-size: 2em;
+  list-style-type: square;
+}
+
+/* ------------------------------- Components ------------------------------- */
+
+/* Button */
+.btn {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 500;
+  background-color: #333;
+  color: #fafafa;
+  padding: 1em 2em;
+  border-radius: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 0.15em solid #333;
+}
+
+.btn ion-icon {
+  font-size: 1.2em;
+}
+
+/* Contact Button Modifier */
+.contact_btn {
+  background-color: #68e1fd;
+  color: #333;
+  border: 0.15em solid #333;
+}
+
+/* -------------------------------- Hero Img -------------------------------- */
+.img_container img {
+  height: clamp(28em, 50vw, 40em);
+}
+
+/* ------------------------------ Contact Image ----------------------------- */
+.contact_img_container img {
+  height: 20em;
+}
+
+/* ------------------------------ Media Queries ----------------------------- */
+@media only screen and (max-width: 60em) {
+  .home_container {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr 1fr 80px;
+    grid-template-areas:
+      "nav"
+      "cta"
+      "hero"
+      "foot";
+  }
+
+  .navigation {
+    flex-direction: column;
+    gap: 1em;
+    border: none;
+    font-size: 0.8em;
+  }
+
+  .hero {
+    font-size: 0.7em;
+    align-items: center;
+  }
+
+  .hero-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* -------------------------------- Utilities ------------------------------- */
+/* Margin Top */
+.mt-sm {
+  margin-top: 1em;
+}
+.mt-md {
+  margin-top: 2em;
+}
+.mt-lg {
+  margin-top: 4em;
+}
+
+/* Margin bottom */
+.mb-sm {
+  margin-bottom: 1em;
+}
+.mb-md {
+  margin-bottom: 2em;
+}
+.mb-lg {
+  margin-bottom: 4em;
+}
+/* padding Top */
+.pt-sm {
+  padding-top: 1em;
+}
+.pt-md {
+  padding-top: 2em;
+}
+.pt-lg {
+  padding-top: 4em;
+}
+
+/* padding bottom */
+.pb-sm {
+  padding-bottom: 1em;
+}
+.pb-md {
+  padding-bottom: 2em;
+}
+.pb-lg {
+  padding-bottom: 4em;
+}
